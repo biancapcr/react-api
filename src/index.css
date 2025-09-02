@@ -1,68 +1,126 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+/* CSS Reset */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  
+  background-color: #f5f7fb;
 }
 
 body {
   margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+       
+}
+
+/* header */
+
+.wrapper { 
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: 28px 16px; 
+}
+.title {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
+  margin: 10px 0 20px;
+  color: #131721;
+  font-weight: 600;
+}
+.title::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 2px;
+  margin: 2.5px auto 0;
+  background: goldenrod;          
+  border-radius: 999px;
+}
+
+/* griglia responsive */
+
+.grid {
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+.grid-item { 
+  flex: 1 1 300px; 
+} 
+
+/* card */
+
+.card {
+  background: #1a2234;       
+  border: 2.5px solid #29353c;
+  box-shadow: 0 12px 28px rgba(0,0,0,.35);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px rgba(0,0,0,.50);
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* img */
+
+.card-image { 
+  width: 100%; 
+  display: block; 
+}
+.card-img    { 
+  height: 260px; 
+  object-fit: cover; 
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
+/* contenuto */
+
+.card-body { 
+  padding: 16px; 
+  text-align: center; 
+}
+.card-title {
+  margin: 0 0 10px;
+  font-size: 20px;
+  font-family: "Playfair Display", serif;
   font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+  color: black;
 }
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.card-text {
+  margin: 0;
+  font-size: 14.5px;
+  line-height: 1.5;
+  color: black;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+/* dettagli */
+
+.details {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  overflow: hidden;
+}
+.details-row {
+  padding: 10px 15px;
+  font-size: 14px;
+  text-align: center;
+  font-style: italic;
+}
+
+/* palette bande */
+
+.bg-1 { 
+  background: #141a2b; 
+  color: #e6e6e6 
+}
+.bg-2 { 
+  background: #121827; 
+  color: goldenrod; 
+}
+.bg-3 { 
+  background: #101624; 
+  color: #e6e6e6; 
 }
