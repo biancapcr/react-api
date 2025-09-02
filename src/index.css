@@ -71,14 +71,16 @@ body {
   display: block; 
 }
 .card-img    { 
-  height: 260px; 
+  height: 280px; 
   object-fit: cover; 
 }
 
 /* contenuto */
 
 .card-body { 
-  padding: 16px; 
+  padding: 15px; 
+  flex: 0 0 auto;
+  padding-bottom: 10px;
   text-align: center; 
 }
 .card-title {
@@ -91,16 +93,19 @@ body {
 .card-text {
   margin: 0;
   font-size: 14.5px;
-  line-height: 1.5;
   color: black;
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;             
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 90px;     
 }
 
 /* dettagli */
 
 .details {
   list-style: none;
-  padding: 0;
-  margin: 10px 0 0;
   overflow: hidden;
 }
 .details-row {
