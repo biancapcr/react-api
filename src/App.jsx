@@ -1,10 +1,20 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// importazione
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 function App() {
-  const [count, setCount] = useState(0)
+  // array dall'API
+  const [actresses, setActresses] = useState([]);
+
+  // fetch delle attrici
+  function fetchActresses() {
+    axios
+      .get("https://lanciweb.github.io/demo/api/actresses/")
+      .then((res) => setActresses(res.data));
+  }
+
+  useEffect(fetchActresses, []);
+
 
   return (
     <>
